@@ -25,6 +25,9 @@ public class HomePage extends TestBase{
 	@FindBy(linkText= "Deals")
 	WebElement deals;
 	
+	@FindBy(linkText= "Tasks")
+	WebElement tasks;
+	
 	@FindBy(xpath= "//i[@class='settings icon']")
 	WebElement settingIcon;
 	
@@ -59,7 +62,10 @@ public class HomePage extends TestBase{
 		case "Deals" :
 			deals.click();	
 			break;	
-			
+		
+		case "Tasks" :
+			tasks.click();	
+			break;	
 		
 		}		
 	}

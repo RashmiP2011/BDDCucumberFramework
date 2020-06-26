@@ -63,7 +63,7 @@ public class CompaniesPage extends TestBase{
 			
 	    }
 		
-		public void deleteCompaany(String companyName) throws Throwable
+		public void deleteCompany(String companyName) throws Throwable
 		{		
 		WebElement deleteBtn = companiesTable.findElement(By.xpath("//td[text()='" + companyName +"']/parent::tr/td/div/button/i[@class='trash icon']"));
 			

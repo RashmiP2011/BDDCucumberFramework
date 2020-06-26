@@ -7,26 +7,31 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		
 		
-		//the path of the feature files
+
 		features = "C:\\Users\\RashmiP2\\eclipse-workspace\\FreeCrmBDDFramwork\\src\\main\\java\\Features\\FreeCRM_Companies.feature", 
 		
-		//the path of the step definition files
+	
 		glue={"CompaniesStepDefinition"}, 
 		
-		//to generate different types of reporting
-		format = {"pretty","html:html-test-output"},
-		//,"json:json-test-output/cucumber.json","junit:junit-xml-output/cucumber.xml"
+		
+		plugin = {"pretty","html:target/html-test-output","json:target/json-test-output/cucumber.json","junit:target/junit-xml-output/cucumber.xml"},
+		
+		////,"json:target/json-test-output/cucumber.json","junit:target/junit-xml-output/cucumber.xml"
 		
 		// dryRun the test cases
 		dryRun = false,
 		
 		//Format Console Output
-		monochrome = false
+		monochrome = true
 		
 		//tagging
 		//tags= {"@SmokeTest "}
 		//,@RegressionTest
 		)
+
+
+
+
 public class CompaniesTestRunner {
 
 }

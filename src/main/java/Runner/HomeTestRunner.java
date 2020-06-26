@@ -14,14 +14,14 @@ import cucumber.api.junit.Cucumber;
 		glue={"HomeStepDefinition"}, 
 		
 		//to generate different types of reporting
-		format = {"pretty","html:html-test-output","json:json-test-output/cucumber.json","junit:junit-xml-output/cucumber.xml"},
-		
+		format = {"pretty","html:target/html-test-output","json:target/json-test-output/cucumber.json","junit:target/junit-xml-output/cucumber.xml"},
+		////,"json:json-test-output/cucumber.json","junit:target/junit-xml-output/cucumber.xml"
 		
 		// dryRun the test cases
 		dryRun = false,
 		
 		//Format Console Output
-		monochrome = false
+		monochrome = true
 		
 		//tagging
 		//tags= {"@SmokeTest "}

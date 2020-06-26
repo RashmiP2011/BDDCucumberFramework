@@ -30,5 +30,5 @@ Scenario Outline: FreeCRM delete Company
 	
 	Examples: 
 		|companyname	|
-		|CitiusTech		|
-	#	|Accenture  	|
+	#	|CitiusTech		|
+		|Accenture  	|

@@ -72,7 +72,7 @@ public class CompaniesStepDefinition extends TestBase {
 	public void identify_the_Company_with_and_delete_the_record(String companyName) throws Throwable {
 		companiesobj = new CompaniesPage();
 		Thread.sleep(2000);
-		companiesobj.deleteCompaany(companyName);
+		companiesobj.deleteCompany(companyName);
 		
 	}
 	

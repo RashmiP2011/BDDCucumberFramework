@@ -10,6 +10,8 @@ import com.qa.pages.LoginPage;
 import com.qa.util.TestBase;
 
 import cucumber.api.DataTable;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -20,6 +22,16 @@ public class HomeStepDefinition extends TestBase {
 	CompaniesPage companiesobj;
 	WebDriver driver;
 
+	@Before//("@RegressionTest")
+	public void before(){
+		System.out.println("Before Execution");
+	}
+	
+	@After//("@SmokeTest")
+	public void after(){
+		System.out.println("After Execution");
+	}
+	
 	@Given("^User is already on login page$")
 	public void user_is_already_on_login_page() {
 
@@ -50,14 +62,15 @@ public class HomeStepDefinition extends TestBase {
 
 	}
 	
-	@Then("^Verfiy all menu options are present on Home page$")
-	public void verfiy_all_menu_options_are_present_on_Home_page(DataTable options) throws Throwable {
+	@Then("^Verfiy all menu options on Home page$")
+	public void verify_all_menu_options_on_Home_page(DataTable options) throws Throwable {
 		
 	    List<List<String>> data = options.raw();
 	    
 	    for (int i = 0;i<=data.size()-1; i++){
+	    	
 	    homeobj.verifyMenuOption(data.get(i).get(0));
-	    System.out.print(data.get(i).get(0));
+	    System.out.println(data.get(i).get(0));
 	    
 	    }
 	    
@@ -68,4 +81,8 @@ public class HomeStepDefinition extends TestBase {
 		homeobj.logoutUser();
 
 	}
+	
+	
+	
+	
 }

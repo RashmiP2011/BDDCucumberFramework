@@ -1,13 +1,13 @@
-Feature: FreeCRM Contact Feature 
+Feature: FreeCRM Home Feature 
 
-
-Scenario: FreeCRM add new Contact 
+@SmokeTest
+Scenario: FreeCRM verify menu options on Home page 
 
 	Given User is already on login page 
 	When Title of login page is <"Cogmento CRM"> 
 	Then User login into application 
 	And Verify login successful on Home page
-	And Verfiy all menu options are present on Home page
+	And Verfiy all menu options on Home page
 	|Home		|
 	|Calendar	|
 	|Contacts	|
@@ -20,5 +20,4 @@ Scenario: FreeCRM add new Contact
 	|Email		|
 	|Campaigns	|
 	|Forms		|
-		
 	And Logout 

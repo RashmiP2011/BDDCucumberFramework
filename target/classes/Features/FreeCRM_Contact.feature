@@ -1,6 +1,6 @@
 Feature: FreeCRM Contact Feature 
 
-@SmokeTest
+@SmokeTest @RegressionTest	
 Scenario Outline: FreeCRM add new Contact 
 
 	Given User is already on login page 
@@ -32,6 +32,6 @@ Scenario Outline: FreeCRM delete Contact
 	
 	Examples: 
 		|firstname	|lastname	|
-	#	|Rashmi		|Poojari	|
+		|Rashmi		|Poojari	|
 	#	|Preeti     |Rathod		|
-	#	|ABC        |XYZ|
+	#	|ABC        |XYZ		|
